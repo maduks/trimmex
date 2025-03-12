@@ -2,13 +2,39 @@ import { Check } from "lucide-react";
 import productImage from "../assets/trimmex-product.jpeg";
 import OrderModal from "./OrderModal";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Pricing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const handleOrderSubmit = (orderData) => {
-    console.log("Order submitted:", orderData);
-    setIsModalOpen(false);
+  const handleOrderSubmit = async (orderData) => {
+    //alert("Order submitted");
+    navigate("/thank-you");
+    try {
+      // Here you would typically send the order data to your backend
+      const orderPayload = {
+        ...orderData,
+        // selectedTier: selectedTier?.name,
+        // totalAmount: selectedTier
+        //   ? selectedTier.price * orderData.numberOfPacks
+        //   : 0,
+        // orderDate: new Date().toISOString(),
+        // productDetails: selectedTier?.productDetails,
+      };
+
+      // Replace this with your actual API call
+      console.log("Submitting order:", orderPayload);
+
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Navigate to Thank You page
+      navigate("/thank-you");
+    } catch (error) {
+      console.error("Error submitting order:", error);
+      alert("Failed to place order. Please try again.");
+    }
   };
   const handleOrderClick = (tier) => {
     setIsModalOpen(true);

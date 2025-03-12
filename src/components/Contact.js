@@ -20,7 +20,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Phone</p>
-                  <p className="font-medium text-gray-900">+234 902 050 0088</p>
+                  <p className="font-medium text-gray-900">+234 706 201 0063</p>
                 </div>
               </div>
 
@@ -31,7 +31,7 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-gray-500">Email</p>
                   <p className="font-medium text-gray-900">
-                    info@trimmexcoffee.com.ng
+                    trimmexgreencoffee@gmail.com
                   </p>
                 </div>
               </div>
@@ -40,10 +40,10 @@ const Contact = () => {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600">
                   <MapPin className="h-5 w-5" />
                 </div>
-                <div>
+                {/* <div>
                   <p className="text-sm text-gray-500">Address</p>
                   <p className="font-medium text-gray-900">Abuja, Nigeria</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

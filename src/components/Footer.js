@@ -115,8 +115,8 @@ const Footer = () => {
             <h3 className="mb-4 text-lg font-semibold text-white">
               Contact Us
             </h3>
-            <p className="mb-2">Phone: +234 902 050 0088</p>
-            <p className="mb-2">Email: info@trimmexcoffee.com.ng</p>
+            <p className="mb-2">Phone: +234 706 201 0063</p>
+            <p className="mb-2">Email: trimmexgreencoffee@gmail.com</p>
             <p>Address: Abuja, Nigeria</p>
           </div>
         </div>

@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import Pricing from './components/Pricing';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
+import ThankYou from './components/Thankyou';
 // Import components
 import LandingPage from './pages/LandingPage';
 import Login from './pages/admin/Login';
@@ -96,6 +96,7 @@ function App() {
             <Route path="orders/:id" element={<OrderDetails />} />
             <Route path="settings" element={<Settings />} />
           </Route>
+          <Route path="/thank-you" element={<ThankYou />} />
 
           {/* Catch all route - redirect to home */}
           <Route path="*" element={<Navigate to="/" replace />} />

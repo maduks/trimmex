@@ -75,7 +75,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, onSubmit }) =>
             />
           </div>
 
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Email
             </label>
@@ -86,7 +86,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, onSubmit }) =>
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
-          </div>
+          </div> */}
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -128,7 +128,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, onSubmit }) =>
             />
           </div>
 
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Additional Notes (Optional)
             </label>
@@ -138,7 +138,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, onSubmit }) =>
               value={formData.notes}
               onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
             />
-          </div>
+          </div> */}
 
           <div className="flex justify-end gap-4 mt-6">
             <button
