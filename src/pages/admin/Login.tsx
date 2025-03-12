@@ -1,14 +1,48 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 const Login = () => {
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({ email: '', password: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const orderData = {
+      method: "POST", // Use POST for sending data
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email:  credentials.email,
+        password: credentials.password,
+      }),
+    };
+    // const response = await axios(
+    //   "https://trimmexapi.vercel.app/api/users/login",
+    //   orderData
+    // );
+
+    const API_URL = "https://trimmexapi.vercel.app/api/users/login";
+
+
+
+    const response = await axios.post(
+      API_URL,
+      {
+        email: "user@example.com",
+        password: "password123",
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true, // Use this only if your API requires cookies (CORS)
+      }
+    );
+
     // Add your authentication logic here
-    localStorage.setItem('adminToken', 'dummy-token');
+   // localStorage.setItem('adminToken', 'dummy-token');
     navigate('/admin');
   };
 

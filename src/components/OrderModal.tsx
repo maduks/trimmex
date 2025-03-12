@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
-
 interface OrderModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -10,22 +9,18 @@ interface OrderModalProps {
 interface OrderFormData {
   customerName: string;
   phoneNumber: string;
-  email: string;
   city: string;
   address: string;
   numberOfPacks: number;
-  notes?: string;
 }
 
 const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, onSubmit }) => {
   const [formData, setFormData] = useState<OrderFormData>({
     customerName: '',
     phoneNumber: '',
-    email: '',
     city: '',
     address: '',
     numberOfPacks: 1,
-    notes: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -118,14 +113,23 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, onSubmit }) =>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Number of Packs
             </label>
-            <input
+
+            <select 
+              className="w-full p-2 border rounded-md focus:ring-2 focus:ring-green-500"
+             onChange={(e) => setFormData({ ...formData, numberOfPacks: parseInt(e.target.value) })}>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            
+            </select>
+            {/* <input
               type="number"
               required
               min="1"
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-green-500"
               value={formData.numberOfPacks}
-              onChange={(e) => setFormData({ ...formData, numberOfPacks: parseInt(e.target.value) })}
-            />
+              
+            /> */}
           </div>
 
           {/* <div>

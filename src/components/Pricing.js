@@ -3,34 +3,35 @@ import productImage from "../assets/trimmex-product.jpeg";
 import OrderModal from "./OrderModal";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Pricing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleOrderSubmit = async (orderData) => {
-    //alert("Order submitted");
-    navigate("/thank-you");
     try {
-      // Here you would typically send the order data to your backend
-      const orderPayload = {
-        ...orderData,
-        // selectedTier: selectedTier?.name,
-        // totalAmount: selectedTier
-        //   ? selectedTier.price * orderData.numberOfPacks
-        //   : 0,
-        // orderDate: new Date().toISOString(),
-        // productDetails: selectedTier?.productDetails,
+      //alert(JSON.stringify(orderData));
+      const orderData = {
+        method: "POST", // Use POST for sending data
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: "user@example.com",
+          password: "password123",
+        }),
       };
+      const response = await fetch(
+        "https://trimmexapi.vercel.app/api/users/login",
+        orderData
+      );
 
       // Replace this with your actual API call
-      console.log("Submitting order:", orderPayload);
-
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Submitting order: ", JSON.stringify(orderData));
 
       // Navigate to Thank You page
-      navigate("/thank-you");
+      //navigate("/thank-you");
     } catch (error) {
       console.error("Error submitting order:", error);
       alert("Failed to place order. Please try again.");

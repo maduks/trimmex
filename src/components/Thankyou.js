@@ -12,10 +12,7 @@ const ThankYou = () => {
         call you to confirm the order within 24 hours. Please note that delivery
         takes 1-3 days to be brought to your door step.
       </p>
-      <p className="text-lg text-gray-700 mb-6">
-        Please note that if you dont pay, Mrs Kristabel cafon will use thunder
-        on you oh!.
-      </p>
+
       <button
         onClick={() => navigate("/")}
         className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
