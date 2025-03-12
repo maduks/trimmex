@@ -65,10 +65,10 @@ function Pricing() {
       image: productImage,
     },
     {
-      id: 30000,
+      id: 25000,
       name: "Buy 3 Get 1 Free",
-      price: "₦30,000",
-      promotion: "Save ₦20,000!",
+      price: "₦25,000",
+      promotion: "Save ₦25,000!",
       description: [
         {
           name: "4 Weeks Supply",
