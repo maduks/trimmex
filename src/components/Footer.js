@@ -117,7 +117,7 @@ const Footer = () => {
             </h3>
             <p className="mb-2">Phone: +234 706 201 0063</p>
             <p className="mb-2">Email: trimmexgreencoffee@gmail.com</p>
-            <p>Address: Abuja, Nigeria</p>
+            {/* <p>Address: Abuja, Nigeria</p> */}
           </div>
         </div>
         <div className="mt-8 border-t border-gray-800 pt-8 text-center">

@@ -36,15 +36,15 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600">
                   <MapPin className="h-5 w-5" />
                 </div>
-                {/* <div>
+                <div>
                   <p className="text-sm text-gray-500">Address</p>
                   <p className="font-medium text-gray-900">Abuja, Nigeria</p>
-                </div> */}
-              </div>
+                </div>
+              </div> */}
             </div>
           </div>
 
