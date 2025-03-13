@@ -28,7 +28,7 @@ const Login = () => {
 
 
     fetch("https://chupez.com/api/users/login", {
-      method: "OPTIONS",
+      method: "POST",
       headers: { "Origin": "https://trimmex.vercel.app" },
     })
       .then(response => response.headers)
