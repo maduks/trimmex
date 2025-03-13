@@ -27,23 +27,17 @@ const Login = () => {
 
 
 
-    const response = await axios.post(
-      API_URL,
-      {
-        email: "user@example.com",
-        password: "password123",
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true, // Use this only if your API requires cookies (CORS)
-      }
-    );
+    fetch("https://chupez.com/api/users/login", {
+      method: "OPTIONS",
+      headers: { "Origin": "https://trimmex.vercel.app" },
+    })
+      .then(response => response.headers)
+      .then(headers => console.log([]))
+      .catch(error => console.error(error));
 
     // Add your authentication logic here
    // localStorage.setItem('adminToken', 'dummy-token');
-    navigate('/admin');
+   // navigate('/admin');
   };
 
   return (
